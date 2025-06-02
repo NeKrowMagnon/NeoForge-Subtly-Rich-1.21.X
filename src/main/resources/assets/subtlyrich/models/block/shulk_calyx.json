@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "subtlyrich:block/shulk_calyx"
+  }
+}

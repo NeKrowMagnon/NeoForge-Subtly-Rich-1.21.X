@@ -1,5 +1,8 @@
 package net.nekrowmagnon.subtlyrich;
 
+import net.nekrowmagnon.subtlyrich.block.ModBlocks;
+import net.nekrowmagnon.subtlyrich.item.ModCreativeModTabs;
+import net.nekrowmagnon.subtlyrich.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -51,6 +54,11 @@ public class SubtlyRich {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
@@ -63,7 +71,16 @@ public class SubtlyRich {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.SCULK_REMNANT);
+            event.accept(ModItems.WITHERING_SCULK_REMNANT);
+            event.accept(ModItems.FUSING_SCULK_REMNANT);
+        }
 
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.SHULK_POLYP);
+            event.accept(ModBlocks.SHULK_CALYX);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
