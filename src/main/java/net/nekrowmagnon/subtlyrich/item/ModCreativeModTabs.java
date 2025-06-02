@@ -22,6 +22,9 @@ public class ModCreativeModTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.SHULK_POLYP);
                         output.accept(ModBlocks.SHULK_CALYX);
+                        output.accept(ModItems.SHULKER_PALP);
+                        output.accept(ModItems.CALCIUM_DUST);
+                        output.accept(ModItems.MAGNESIUM_DUST);
                     }).build());
     public static final Supplier<CreativeModeTab> SUBTLY_RICH_GENERAL = CREATIVE_MODE_TAB.register("subtly_rich_general_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SCULK_REMNANT.get()))
@@ -31,6 +34,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.SCULK_REMNANT);
                         output.accept(ModItems.WITHERING_SCULK_REMNANT);
                         output.accept(ModItems.FUSING_SCULK_REMNANT);
+                        output.accept(ModBlocks.WITHERING_SCULK_CATALYST);
                     }).build());
 
 

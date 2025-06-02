@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.nekrowmagnon.subtlyrich.SubtlyRich;
+import net.nekrowmagnon.subtlyrich.block.custom.WitheringSculkCatalystBlock;
 import net.nekrowmagnon.subtlyrich.item.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -33,6 +34,12 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresCorrectToolForDrops()
                     .strength(3.5F, 7.0F)));
+
+    public static final DeferredBlock<Block> WITHERING_SCULK_CATALYST = registerBlock("withering_sculk_catalyst",
+            () -> new WitheringSculkCatalystBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .instrument(NoteBlockInstrument.WITHER_SKELETON)
+                    .strength(1.5F, 4.0F)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
