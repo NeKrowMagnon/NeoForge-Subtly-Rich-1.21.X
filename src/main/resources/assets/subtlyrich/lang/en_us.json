@@ -11,5 +11,10 @@
   "block.subtlyrich.withering_sculk_catalyst": "Withering Sculk Catalyst",
 
   "creativetab.subtlyrich.subtly_rich_end": "Subtly Rich End",
-  "creativetab.subtlyrich.subtly_rich_general": "Subtly Rich General"
+  "creativetab.subtlyrich.subtly_rich_general": "Subtly Rich General",
+
+  "tooltip.subtlyrich.withering_sculk_catalyst": "This Block is §9DEVIOUS§r",
+  "tooltip_subtlyrich_sculk_remnant": "Press §eShift§r for more information",
+  "tooltip_subtlyrich_sculk_remnant.shift_down": "This item transfers sculk charge",
+  "tooltip.subtlyrich.shulker_palp": "Feels airy... Maybe you should eat it?"
 }
