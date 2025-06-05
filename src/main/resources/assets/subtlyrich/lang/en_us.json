@@ -10,6 +10,20 @@
   "block.subtlyrich.shulk_calyx": "Shulk Calyx",
   "block.subtlyrich.withering_sculk_catalyst": "Withering Sculk Catalyst",
 
+  "block.subtlyrich.shulk_planks": "Shulk Planks",
+  "block.subtlyrich.shulk_stairs": "Shulk Stairs",
+  "block.subtlyrich.shulk_slab": "Shulk Slab",
+
+  "block.subtlyrich.shulk_pressure_plate": "Shulk Pressure Plate",
+  "block.subtlyrich.shulk_button": "Shulk Button",
+
+  "block.subtlyrich.shulk_fence": "Shulk Fence",
+  "block.subtlyrich.shulk_fence_gate": "Shulk Fence Gate",
+  "block.subtlyrich.shulk_wall": "Shulk Wall",
+
+  "block.subtlyrich.shulk_door": "Shulk Door",
+  "block.subtlyrich.shulk_trapdoor": "Shulk Trapdoor",
+
   "creativetab.subtlyrich.subtly_rich_end": "Subtly Rich End",
   "creativetab.subtlyrich.subtly_rich_general": "Subtly Rich General",
 

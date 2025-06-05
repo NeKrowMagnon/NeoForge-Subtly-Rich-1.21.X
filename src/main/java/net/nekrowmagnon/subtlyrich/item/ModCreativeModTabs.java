@@ -25,6 +25,20 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.SHULKER_PALP);
                         output.accept(ModItems.CALCIUM_DUST);
                         output.accept(ModItems.MAGNESIUM_DUST);
+
+                        output.accept(ModBlocks.SHULK_PLANKS);
+                        output.accept(ModBlocks.SHULK_STAIRS);
+                        output.accept(ModBlocks.SHULK_SLAB);
+
+                        output.accept(ModBlocks.SHULK_PRESSURE_PLATE);
+                        output.accept(ModBlocks.SHULK_BUTTON);
+
+                        output.accept(ModBlocks.SHULK_FENCE);
+                        output.accept(ModBlocks.SHULK_FENCE_GATE);
+                        output.accept(ModBlocks.SHULK_WALL);
+
+                        output.accept(ModBlocks.SHULK_DOOR);
+                        output.accept(ModBlocks.SHULK_TRAPDOOR);
                     }).build());
     public static final Supplier<CreativeModeTab> SUBTLY_RICH_GENERAL = CREATIVE_MODE_TAB.register("subtly_rich_general_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SCULK_REMNANT.get()))

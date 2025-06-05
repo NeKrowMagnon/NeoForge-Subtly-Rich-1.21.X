@@ -2,10 +2,11 @@ package net.nekrowmagnon.subtlyrich.block;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.nekrowmagnon.subtlyrich.SubtlyRich;
 import net.nekrowmagnon.subtlyrich.block.custom.WitheringSculkCatalystBlock;
@@ -34,6 +35,83 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresCorrectToolForDrops()
                     .strength(3.5F, 7.0F)));
+
+    public static final DeferredBlock<Block> SHULK_PLANKS = registerBlock("shulk_planks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.5F, 7.0F)));
+
+    public static final DeferredBlock<StairBlock> SHULK_STAIRS = registerBlock("shulk_stairs",
+            () -> new StairBlock(ModBlocks.SHULK_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(3.5F, 7.0F)));
+public static final DeferredBlock<SlabBlock> SHULK_SLAB = registerBlock("shulk_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(3.5F, 7.0F)));
+
+public static final DeferredBlock<PressurePlateBlock> SHULK_PRESSURE_PLATE = registerBlock("shulk_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.STONE,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(3.5F, 7.0F)));
+public static final DeferredBlock<ButtonBlock> SHULK_BUTTON = registerBlock("shulk_button",
+            () -> new ButtonBlock(BlockSetType.STONE, 20,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .noCollission()
+                            .strength(3.5F, 7.0F)));
+
+public static final DeferredBlock<FenceBlock> SHULK_FENCE = registerBlock("shulk_fence",
+            () -> new FenceBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(3.5F, 7.0F)));
+public static final DeferredBlock<FenceGateBlock> SHULK_FENCE_GATE = registerBlock("shulk_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(3.5F, 7.0F)));
+public static final DeferredBlock<WallBlock> SHULK_WALL = registerBlock("shulk_wall",
+            () -> new WallBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(3.5F, 7.0F)));
+
+public static final DeferredBlock<DoorBlock> SHULK_DOOR = registerBlock("shulk_door",
+            () -> new DoorBlock(BlockSetType.COPPER,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()
+                            .strength(3.5F, 7.0F)));
+public static final DeferredBlock<TrapDoorBlock> SHULK_TRAPDOOR = registerBlock("shulk_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.COPPER,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()
+                            .strength(3.5F, 7.0F)));
+
 
     public static final DeferredBlock<Block> WITHERING_SCULK_CATALYST = registerBlock("withering_sculk_catalyst",
             () -> new WitheringSculkCatalystBlock(BlockBehaviour.Properties.of()
